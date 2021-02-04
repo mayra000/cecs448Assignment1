@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>CECS 448 Assignment 1 Form</title>
+    </head>
+    <body>
+        <center><h1>Register for an Account</h1></center>
+        <div align = "center">
+            <form>
+                <label for="name">Full name:</label><br>
+                <input type="text" id="name" name="name" value=""><br><br>
+    
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" value=""><br><br>
+    
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="tel" name="tel" value=""><br><br>
+    
+                <label for="birthday">Date of Birth:</label><br>
+                <input type="date" id="birthday" name="birthday"><br><br>
+    
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd" min="0"><br><br>
+    
+                <label for="pwd">Confirm Password:</label><br>
+                <input type="password" id="pwd" name="pwd" min = "0"><br><br>
+    
+                <label for="userSource">How did you hear about us?</label><br>
+                <select id="userSource" name="userSource" value ="">
+                    <option value="">Choose</option>
+                    <option value="class">Class</option>
+                    <option value="internet">Internet</option>
+                    <option value="friends">Friend</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+    
+                <label for="file">Upload file:</label><br>
+                <input type="file" id="file" name="file"> <br><br>
+    
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
