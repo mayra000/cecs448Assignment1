@@ -1,52 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
     <meta charset="UTF-8">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>CECS 448 Assignment 1 Form</title>
-    </head>
-    <body>
-        <center><h1>Register for an Account</h1></center>
-            <form>
-                <label for="name">Full name:</label>
-                <input type="text" placeholder="Enter Name" id="name" name="name" required><br><br>
-    
-                <label for="email">Email:</label>
-                <input type="email" placeholder="Enter Email" id="email" name="email" required><br><br>
-    
-                <label for="phone">Phone:</label>
-                <input type="tel" placeholder="Enter Phone" id="tel" name="tel" required><br><br>
-    
-                <label for="birthday">Date of Birth:</label>
-                <input type="date" id="birthday" name="birthday"><br><br>
-    
-                <label for="pwd">Password:</label>
-                <input type="password" placeholder="Enter Password" id="pwd" name="pwd" min="0" required><br><br>
-    
-                <label for="pwd">Confirm Password:</label>
-                <input type="password" placeholder="Confirm Password" id="pwd" name="pwd" min = "0" required><br><br>
-    
-                <label for="userSource">How did you hear about us?</label>
-                <select id="userSource" name="userSource" value ="">
-                    <option value="">Choose</option>
-                    <option value="class">Class</option>
-                    <option value="internet">Internet</option>
-                    <option value="friends">Friend</option>
-                    <option value="other">Other</option>
-                </select><br><br>
-    
-                <label for="file">Upload Profile Picture:</label>
-                <!-- <input type="file" id="file" name="pfp" accept="image/x-png,image/gif,image/jpeg"><br><br> -->
-                <input type="file" class="custom-file-input" title="Browse"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
 
-<<<<<<< Updated upstream
-                <div align = "center">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-    </body>
-=======
     <div class="wrapper">
         <div class="title">
             Registration Form
@@ -54,23 +17,23 @@
         <form>
             <div class="input_field">
                 <label>First Name</label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
             </div>
             <div class="input_field">
                 <label>Last Name</label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
             </div>
             <div class="input_field">
                 <label>Email Address</label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
             </div>
             <div class="input_field">
                 <label>Password</label>
-                <input type="password" class="input">
+                <input type="password" class="input"required>
             </div>
             <div class="input_field">
                 <label>Confirm Password</label>
-                <input type="password" class="input">
+                <input type="password" class="input" required>
             </div>
             <div class="input_field">
                 <label>Gender</label>
@@ -80,20 +43,21 @@
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="female">Non Binary</option>
+                    <option value="female">Prefer not to say</option>
                 </select>
                 </div>
             </div>
             <div class="input_field">
                 <label>Phone Number</label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
             </div>
             <div class="input_field">
                 <label>Address</label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
             </div>
             <div class="input_field">
                 <label>City</label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
             </div>
             <div class="input_field">
                 <label>State</label>
@@ -156,7 +120,7 @@
             </div>
             <div class="input_field">
                 <label>Postal Code</label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
             </div>
             <div class="input_field terms">
                 <label class="check">
@@ -173,5 +137,4 @@
 
 </body>
 
->>>>>>> Stashed changes
 </html>
