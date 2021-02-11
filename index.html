@@ -7,27 +7,26 @@
     </head>
     <body>
         <center><h1>Register for an Account</h1></center>
-        <div align = "center">
             <form>
-                <label for="name">Full name:</label><br>
-                <input type="text" id="name" name="name" value=""><br><br>
+                <label for="name">Full name:</label>
+                <input type="text" placeholder="Enter Name" id="name" name="name" required><br><br>
     
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" value=""><br><br>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter Email" id="email" name="email" required><br><br>
     
-                <label for="phone">Phone:</label><br>
-                <input type="tel" id="tel" name="tel" value=""><br><br>
+                <label for="phone">Phone:</label>
+                <input type="tel" placeholder="Enter Phone" id="tel" name="tel" required><br><br>
     
-                <label for="birthday">Date of Birth:</label><br>
+                <label for="birthday">Date of Birth:</label>
                 <input type="date" id="birthday" name="birthday"><br><br>
     
-                <label for="pwd">Password:</label><br>
-                <input type="password" id="pwd" name="pwd" min="0"><br><br>
+                <label for="pwd">Password:</label>
+                <input type="password" placeholder="Enter Password" id="pwd" name="pwd" min="0" required><br><br>
     
-                <label for="pwd">Confirm Password:</label><br>
-                <input type="password" id="pwd" name="pwd" min = "0"><br><br>
+                <label for="pwd">Confirm Password:</label>
+                <input type="password" placeholder="Confirm Password" id="pwd" name="pwd" min = "0" required><br><br>
     
-                <label for="userSource">How did you hear about us?</label><br>
+                <label for="userSource">How did you hear about us?</label>
                 <select id="userSource" name="userSource" value ="">
                     <option value="">Choose</option>
                     <option value="class">Class</option>
@@ -36,11 +35,14 @@
                     <option value="other">Other</option>
                 </select><br><br>
     
-                <label for="file">Upload file:</label><br>
-                <input type="file" id="file" name="file"> <br><br>
-    
-                <input type="submit" value="Submit">
+                <label for="file">Upload Profile Picture:</label>
+                <!-- <input type="file" id="file" name="pfp" accept="image/x-png,image/gif,image/jpeg"><br><br> -->
+                <input type="file" class="custom-file-input" title="Browse"/>
+
+
+                <div align = "center">
+                    <input type="submit" value="Submit">
+                </div>
             </form>
-        </div>
     </body>
 </html>
