@@ -164,6 +164,46 @@ body {
     background: #737f8c;
 }
 
+#selected-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px;
+}
+
+#selected-photo:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-out;
+}
+
+#file-input {
+  display: none;
+}
+
+.image-preview {
+  margin: auto;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+progress {
+  margin-top: 20px;
+  border-radius: 2px; 
+  width: 100%;
+  height: 10px;
+  box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+  display: none;
+}
+progress::-webkit-progress-bar {
+  border-radius: 2px;
+}
+progress::-webkit-progress-value {
+  background-color: #62cf83;
+  border-radius: 2px;
+}
+
 @media (max-width: 420px) {
     .wrapper form .input_field {
         flex-direction: column;
