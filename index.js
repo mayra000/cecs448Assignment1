@@ -10,7 +10,7 @@ function sleep(time) {
 async function loadBar() {
 	for (var i = 0; i <= 100; i++) {
       // Sleep for 25 milliseconds during each iteration to make user wait
-      await sleep(25);
+      await sleep(10);
       // Update progress bar value
   		document.getElementById('progress-bar').value = i;
 	}
@@ -32,6 +32,23 @@ async function handleFileLoad() {
   fileReader.readAsDataURL(file[0]);
   // After file is loaded hide progress bar
   document.getElementById('progress-bar').style.display = 'none';
+}
+
+// Handle form submission
+function handleFormSubmit(form) {
+  var loader = document.createElement('div');
+  var submitField = document.getElementById('submit-field');
+  loader.className = 'loader';
+
+  document.getElementById('submit-btn').style.display = 'none';
+
+  submitField.appendChild(loader);
+  // Give time for animation to display
+  setTimeout(function() {
+    // Submit form after 3 seconds 
+    form.submit();
+  }, 2000);
+  return false;
 }
 
 // When file is selected for input field call handleFileLoad

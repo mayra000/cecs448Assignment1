@@ -18,6 +18,7 @@ body {
     margin: 20px auto;
     padding: 30px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+    border-radius: 15px;
 }
 
 .wrapper .title {
@@ -145,15 +146,42 @@ body {
 }
 
 .wrapper form .input_field .btn {
-    width: 100%;
-    padding: 8px 10px;
-    font-size: 15px;
-    border: 0;
-    background: #414850;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 3px;
-    outline: none;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #414850;
+  border: 0;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  display: inline-block;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn:hover span{
+  padding-right: 30px;
+}
+
+.btn span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .wrapper form .input_field:last-child {
@@ -202,6 +230,25 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: #62cf83;
   border-radius: 2px;
+}
+
+.loader {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #62cf83;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+#submit-field {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 420px) {
