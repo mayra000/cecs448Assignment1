@@ -31,7 +31,7 @@ async function handleFileLoad() {
 function handleFormSubmit(form) {
   var loader = document.createElement('div');
   var submitField = document.getElementById('submit-field');
-  loader.className = 'loader';
+  loader.className = 'spin-load';
 
   document.getElementById('submit-btn').style.display = 'none';
 
@@ -44,5 +44,39 @@ function handleFormSubmit(form) {
   return false;
 }
 
+// Validate form fields
+function validateInputFields() {
+  // Get all of the fields in the form
+  var inputFields = document.getElementById('main-form').elements;
+  // Iterate over them
+  for (var i = 0; i < inputFields.length; i++) {
+    var field = inputFields[i];
+    // Check if the input type is text
+    if (field.type == 'text') {
+      // If so, then make sure it's not empty
+      if (field.value == '') {
+        // If it is immediately return false for the whole form
+        return false;
+      }
+    } 
+  }
+  // If the code makes it to here then none of the text fields are empty
+  return true;
+}
+
+// Shake the form submit button
+function errorShake() {
+  // Use jquery effect
+  $('#submit-field').effect('shake', {times: 2}, 800);
+}
+
 // When file is selected for input field call handleFileLoad
 $('#file-input').change(handleFileLoad);
+
+var submitBtn = document.getElementById('submit-btn');
+submitBtn.addEventListener('click', function() {
+  var isFormValid = validateInputFields();
+  if (!isFormValid) {
+    errorShake();
+  }
+})
