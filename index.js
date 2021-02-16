@@ -52,7 +52,7 @@ function validateInputFields() {
   for (var i = 0; i < inputFields.length; i++) {
     var field = inputFields[i];
     // Check if the input type is text
-    if (field.type == 'text') {
+    if (field.type == 'text' || field.type == 'password') {
       // If so, then make sure it's not empty
       if (field.value == '') {
         // If it is immediately return false for the whole form
